@@ -1,0 +1,31 @@
+package myMain;
+import java.util.Scanner;
+	public class MainClass {
+		static Scanner userinput = new Scanner(System.in);
+		public static void main(String[] args){
+	         int x;
+	         int y;
+	         String z;
+	         int total;
+	         boolean roll_again = true;
+	         System.out.println("This App allows you to roll two die");
+	         
+	         while(roll_again == true){
+	        	 x = ((int) (Math.random()*6+1));
+	        	 y = ((int) (Math.random()*6+1));
+	        	 total = x + y;
+	              System.out.println("First roll: " + x);
+	              System.out.println("Second roll: " + y);
+	              System.out.println("Total: " + total);
+	              System.out.println("Would you like to roll again?");
+	              z = userinput.next();
+	              
+	              if (z.equalsIgnoreCase("Yes")) {
+	            	  roll_again = true;
+	              }else {
+	            	  roll_again = false;
+	            	  System.out.println("System closing...");
+	              }
+	              
+	         }
+	    }}
